@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ::before,
+        ::after 通过 css 模拟出来html标签的效果 注意：必须有content属性才行， */ span::before {
+            content: "你";
+            color: red;
+            background-color: pink;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        span::after {
+            content: "好啊";
+            color: green;
+        }
+
+        span {
+            border: 1px solid #000;
+        }
+
+        /*伪元素选择器*/
+
+        /* 选中第一个字母*/
+
+        li::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+         /* 选中第一行的伪元素的选择器*/
+         div::first-line{
+          color:red;
+        }
+        p::selection{
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 也可以通过标签实现-->
+    <!--<span>今天</span><span>天气</span><span>真好</span>-->
+
+    <span>真</span>
+    <ul>
+        <li>You are handsome</li>
+        <li>只要功夫深，铁杵磨成针</li>
+    </ul>
+    <div>
+        <p>你真好啊</p>
+        <p>你真好啊</p>
+        <p>你真好啊</p>
+        <p>你真好啊</p>
+    </div>
+
+
+
+</body>
+
+</html>
